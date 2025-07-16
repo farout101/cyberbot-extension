@@ -7,7 +7,15 @@
     "default_popup": "popup.html",
     "default_icon": "icon.png"
   },
-  "permissions": ["activeTab", "scripting", "cookies", "storage", "tabs"],
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "cookies",
+    "storage",
+    "tabs",
+    "webRequest",
+    "webRequestBlocking"
+  ],
   "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
@@ -15,5 +23,8 @@
       "js": ["content.js"],
       "run_at": "document_idle"
     }
-  ]
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
 }

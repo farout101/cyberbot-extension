@@ -1,9 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { MessageCircle, Shield, Eye } from "lucide-react"
+import { MessageCircle, Shield, Eye, Network } from "lucide-react"
 import Chatbot from "./components/Chatbot"
 import WebsiteScanner from "./components/WebsiteScanner"
+import NetworkMonitor from "./components/NetworkMonitor"
+import "./App.css"
 
 export default function App() {
   const [activeTab, setActiveTab] = useState ("chat")
@@ -11,7 +13,7 @@ export default function App() {
   const tabs = [
     { id: "chat", label: "AI Chat", icon: MessageCircle, description: "Cybersecurity expert assistant" },
     { id: "security", label: "Security Scan", icon: Shield, description: "Website security analysis" },
-    { id: "privacy", label: "Privacy Scan", icon: Eye, description: "Website privacy analysis" },
+    { id: "network_monitor", label: "Network Monitor", icon: Network, description: "Website network traffic" },
   ]
 
   return (
@@ -53,7 +55,9 @@ export default function App() {
         {/* Content Area */}
         <div className="bg-white/5 backdrop-blur-lg border-x border-b border-white/20 rounded-b-2xl flex-1 flex flex-col min-h-0">
           {activeTab === "chat" && <Chatbot />}
-          {(activeTab === "security" || activeTab === "privacy") && <WebsiteScanner />}
+          {activeTab === "security" && <WebsiteScanner />}
+          {activeTab === "network_monitor" && <NetworkMonitor />}
+
         </div>
 
         {/* Footer */}

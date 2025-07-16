@@ -1,1 +1,5 @@
-@import "tailwindcss";
+body {
+    width: 700px;
+    height: auto;
+    margin: 0;
+  }
