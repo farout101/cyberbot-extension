@@ -13,8 +13,7 @@
     "cookies",
     "storage",
     "tabs",
-    "webRequest",
-    "webRequestBlocking"
+    "webRequest"
   ],
   "host_permissions": ["<all_urls>"],
   "content_scripts": [
