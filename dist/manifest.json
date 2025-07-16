@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Woody's CyberAI Bot",
+  "version": "2.0",
+  "description": "Ask your AI assistant for cybersecurity help",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": ["activeTab", "scripting", "cookies", "storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
