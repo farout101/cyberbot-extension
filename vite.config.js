@@ -8,7 +8,7 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: {
-        popup: './popup.html',
+        sidepanel: './sidepanel.html',
         background: './background.js',
         content: './content.js',
       },

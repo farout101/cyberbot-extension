@@ -1,5 +1,16 @@
 const trafficLogs = [];
 
+chrome.action.onClicked.addListener((tab) => {
+    chrome.sidePanel.setOptions({
+        tabId: tab.id,
+        path: 'sidepanel.html',
+        enabled: true,
+    });
+
+    // This must be called *immediately* after a user action
+    chrome.sidePanel.open({ tabId: tab.id });
+});
+
 chrome.webRequest.onCompleted.addListener(
     (details) => {
 

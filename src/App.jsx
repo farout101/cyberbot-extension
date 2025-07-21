@@ -17,8 +17,8 @@ export default function App() {
   ]
 
   return (
-    <div className=" bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4">
-      <div className="w-full max-w-4xl mx-auto flex flex-col">
+    <div className=" bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 h-screen">
+      <div className="w-full h-screen mx-auto flex flex-col">
         {/* Header */}
         <div className="bg-white/10 backdrop-blur-lg rounded-t-2xl border border-white/20 p-6">
           {/* <div className="flex items-center gap-3 mb-6">
@@ -53,7 +53,7 @@ export default function App() {
         </div>
 
         {/* Content Area */}
-        <div className="bg-white/5 backdrop-blur-lg border-x border-b border-white/20 rounded-b-2xl flex-1 flex flex-col min-h-0">
+        <div className="bg-black/30 backdrop-blur-lg border-x border-b border-white/20 rounded-b-2xl flex-1 flex flex-col min-h-0">
           {activeTab === "chat" && <Chatbot />}
           {activeTab === "security" && <WebsiteScanner />}
           {activeTab === "network_monitor" && <NetworkMonitor />}
