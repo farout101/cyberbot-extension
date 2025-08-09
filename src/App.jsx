@@ -57,11 +57,10 @@ export default function App() {
           {activeTab === "chat" && <Chatbot />}
           {activeTab === "security" && <WebsiteScanner />}
           {activeTab === "network_monitor" && <NetworkMonitor />}
-
         </div>
 
         {/* Footer */}
-        <div className="mt-4 text-center">
+        <div className="mt-2 mb-2 text-center">
           <div className="flex items-center justify-center gap-2 text-xs text-slate-400">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             <span>Powered by Gemini AI • Secure & Private</span>
